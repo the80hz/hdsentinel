@@ -8,8 +8,8 @@ COPY hdsentinel.sh  /app
 
 # Install any needed packages and do needed file system modifcations
 RUN apk add --no-cache wget \
-	&& wget https://www.hdsentinel.com/hdslin/hdsentinel-020b-x64.zip \
-	&& unzip hdsentinel-020b-x64.zip \
+	&& wget https://www.hdsentinel.com/hdslin/hdsentinel-020c-x64.zip \
+	&& unzip hdsentinel-020c-x64.zip \
 	&& apk del wget \
 	&& chmod 0755 HDSentinel \
 	&& mkdir /etc/hdsentinel\
