@@ -18,8 +18,8 @@ RUN apk add --no-cache wget \
 	&& echo "*/10       *       *       *       *       hdsentinel -r /etc/hdsentinel/hdsreport.html -html" >> /var/spool/cron/crontabs/root
 
 # Define environment variable
-ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ENV LANG C.UTF-8
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV LANG=C.UTF-8
 
 # Run  when the container launches 
 ENTRYPOINT ["./hdsentinel.sh"]
